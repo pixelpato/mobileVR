@@ -24,6 +24,8 @@ using UnityEngine;
 /// </summary>
 public class CardboardStartup : MonoBehaviour
 {
+
+
     /// <summary>
     /// Start is called before the first frame update.
     /// </summary>
