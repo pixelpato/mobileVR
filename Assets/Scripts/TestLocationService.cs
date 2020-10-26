@@ -5,12 +5,18 @@ using UnityEngine.UI;
 public class TestLocationService : MonoBehaviour {
     public Text coordinatesTxt;
 
-    IEnumerator LocationCoroutine () {
+
+    public void Start () {
+        StartCoroutine("LocationCoroutine");
+    }
+
+        IEnumerator LocationCoroutine () {
         // Uncomment if you want to test with Unity Remote
-        /*#if UNITY_EDITOR
+        #if UNITY_EDITOR
                 yield return new WaitWhile(() => !UnityEditor.EditorApplication.isRemoteConnected);
                 yield return new WaitForSecondsRealtime(5f);
-        #endif*/
+        #endif
+
 #if UNITY_EDITOR
         // No permission handling needed in Editor
 #elif UNITY_ANDROID
