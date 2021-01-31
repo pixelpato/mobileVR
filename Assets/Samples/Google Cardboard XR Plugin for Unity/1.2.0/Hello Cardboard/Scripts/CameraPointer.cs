@@ -56,7 +56,8 @@ public class CameraPointer : MonoBehaviour
         // Checks for screen touches.
         if (Google.XR.Cardboard.Api.IsTriggerPressed)
         {
-            _gazedAtObject?.SendMessage("OnPointerClick");
+           _gazedAtObject?.SendMessage("OnPointerClick");
+            
         }
     }
 }
